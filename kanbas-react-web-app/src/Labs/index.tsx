@@ -1,8 +1,17 @@
-import Lab1 from "./Lab1";
+
+import { Route, Routes, Navigate } from "react-router";
+import Account from "../Kanbas/Account";
+
+
 export default function Labs() {
   return (
-    <div id="wd-labs">
+    <div>
       <h1>Labs</h1>
-      <Lab1 />
+      <Routes>
+      <Route path="/" element={<Navigate to="Account" />} />
+      <Route path="/Account/*" element={<Account />} />
+
+      </Routes>
     </div>
-);}
+  );
+}
